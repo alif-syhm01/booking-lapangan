@@ -1,0 +1,17 @@
+body, html{
+    background-color: #7C83FD;
+    height:100%;
+}
+
+.purple-text {
+    color: #7C83FD;
+}
+
+.icon-click {
+    cursor: pointer;
+}
+
+.button-purple {
+    background-color: #7C83FD;
+    color: #FFFFFF;
+}

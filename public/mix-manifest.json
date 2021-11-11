@@ -1,0 +1,14 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/home.js": "/js/home.js",
+    "/js/login.js": "/js/login.js",
+    "/js/register.js": "/js/register.js",
+    "/js/admin/app.js": "/js/admin/app.js",
+    "/js/admin/dashboard.js": "/js/admin/dashboard.js",
+    "/js/admin/field.js": "/js/admin/field.js",
+    "/js/admin/booking.js": "/js/admin/booking.js",
+    "/css/admin/app.css": "/css/admin/app.css",
+    "/css/app.css": "/css/app.css",
+    "/css/home.css": "/css/home.css",
+    "/css/auth.css": "/css/auth.css"
+}

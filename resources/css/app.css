@@ -1,0 +1,4 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+/* sweet alert 2 */
+@import '../../node_modules/admin-lte/plugins/sweetalert2/sweetalert2.min.css';

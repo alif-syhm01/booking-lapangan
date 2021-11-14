@@ -15,5 +15,8 @@ class VerifyCsrfToken extends Middleware
         'field/add-field',
         'field/edit-field/*',
         'field/delete-field/*',
+        'order/add-order',
+        'order/edit-order/*',
+        'order/delete-order/*',
     ];
 }

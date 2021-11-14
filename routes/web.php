@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\MainPageController;
 use App\Http\Controllers\Admin\ManagementFieldController;
 use App\Http\Controllers\Admin\ManagementBookingController;
 use App\Http\Controllers\FieldController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +30,11 @@ Route::get('register-page', [UserController::class, 'viewRegister']);
 Route::get('admin', [DashboardAdminController::class, 'viewAdmin']);
 Route::get('user', [DashboardUserController::class, 'viewUser']);
 Route::get('field', [FieldController::class, 'viewField']);
+Route::get('order', [OrderController::class, 'viewOrder'] );
+Route::get('test-api', [TestController::class, 'callUser']);
+Route::get('test-field', [TestController::class, 'callField']);
+Route::get('test-rate', [TestController::class, 'callRate']);
+Route::get('test-order', [TestController::class, 'callOrder']);
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('main-page', [MainPageController::class, 'viewMainPage']);
@@ -39,4 +46,10 @@ Route::group(['prefix' => 'field'], function () {
     Route::post('add-field', [FieldController::class, 'addField']);
     Route::put('edit-field/{id_field}', [FieldController::class, 'editField']);
     Route::delete('delete-field/{id_field}', [FieldController::class, 'deleteField']);
+});
+
+Route::group(['prefix' => 'order'], function(){
+    Route::post('add-order', [OrderController::class, 'addOrder']);
+    Route::put('edit-order/{id_order}', [OrderController::class, 'editOrder']);
+    Route::delete('delete-order/{id_order}', [OrderController::class, 'deleteOrder']);
 });

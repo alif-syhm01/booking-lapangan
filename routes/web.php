@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ManagementBookingController;
 use App\Http\Controllers\FieldController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\RateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,4 +53,10 @@ Route::group(['prefix' => 'order'], function(){
     Route::post('add-order', [OrderController::class, 'addOrder']);
     Route::put('edit-order/{id_order}', [OrderController::class, 'editOrder']);
     Route::delete('delete-order/{id_order}', [OrderController::class, 'deleteOrder']);
+});
+
+Route::group(['prefix' => 'rate'], function () {
+    Route::post('add-rate', [RateController::class, 'addRate']);
+    Route::put('edit-rate/{id_rate}', [RateController::class, 'editRate']);
+    Route::delete('delete-rate/{id_rate}', [RateController::class, 'deleteRate']);
 });

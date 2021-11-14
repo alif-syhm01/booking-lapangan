@@ -18,5 +18,8 @@ class VerifyCsrfToken extends Middleware
         'order/add-order',
         'order/edit-order/*',
         'order/delete-order/*',
+        'rate/add-rate',
+        'rate/edit-rate/*',
+        'rate/delete-rate/*',
     ];
 }

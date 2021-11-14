@@ -20,8 +20,6 @@ class OrderController extends Controller
         $payment_proof = $order->payment_proof;
         $payment_status = $order->payment_status;
 
-        // dd($order_id_user, $order_id_field, $time_of_booking, $price_of_booking, $payment_proof, $payment_status);
-
         $insertOrder = new Order();
 
         $insertOrder->order_id_user = $order_id_user;
@@ -54,7 +52,6 @@ class OrderController extends Controller
         $update_payment_proof = $update_order->payment_proof;
         $update_payment_status = $update_order->payment_status;
 
-        //dd($update_order_id_user, $update_order_id_field, $update_time_of_booking, $update_price_of_booking, $update_payment_proof, $update_payment_status);
         $update_order = Order::where('id_order', $id_order)
                         ->update([
                             'order_id_user' => $update_order_id_user,

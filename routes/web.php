@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\MainPageController;
 use App\Http\Controllers\Admin\ManagementFieldController;
 use App\Http\Controllers\Admin\ManagementBookingController;
 use App\Http\Controllers\FieldController;
+use App\Http\Controllers\RateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,4 +40,10 @@ Route::group(['prefix' => 'field'], function () {
     Route::post('add-field', [FieldController::class, 'addField']);
     Route::put('edit-field/{id_field}', [FieldController::class, 'editField']);
     Route::delete('delete-field/{id_field}', [FieldController::class, 'deleteField']);
+});
+
+Route::group(['prefix' => 'rate'], function () {
+    Route::post('add-rate', [RateController::class, 'addRate']);
+    Route::put('edit-rate/{id_rate}', [RateController::class, 'editRate']);
+    Route::delete('delete-rate/{id_rate}', [RateController::class, 'deleteRate']);
 });
